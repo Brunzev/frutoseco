@@ -38,3 +38,4 @@ C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\ref\demomvc.dll
 C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\demomvc.pdb
 C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\demomvc.genruntimeconfig.cache
 C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\demomvc.csproj.CopyComplete
+C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\Razor\Views\Contacto\Index.cshtml.g.cs

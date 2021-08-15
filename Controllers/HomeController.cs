@@ -20,6 +20,7 @@ namespace demomvc.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("texto");
             return View();
         }
 
