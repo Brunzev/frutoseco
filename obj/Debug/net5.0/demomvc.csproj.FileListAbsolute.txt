@@ -39,3 +39,5 @@ C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\demomvc.pdb
 C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\demomvc.genruntimeconfig.cache
 C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\demomvc.csproj.CopyComplete
 C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\Razor\Views\Contacto\Index.cshtml.g.cs
+C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\Razor\Views\Calculadora\Index.cshtml.g.cs
+C:\PROGRAMACIÓN I\demomvc\obj\Debug\net5.0\Razor\Views\Producto\Index.cshtml.g.cs
