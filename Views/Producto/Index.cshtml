@@ -6,22 +6,25 @@
 <h1>@ViewData["Title"]</h1>
 
 <div class="text-center">
-    <h1 class="display-4">Venta de Producto/h1>
+<h1 class="display-4">Venta de Producto</h1>
 
-    <form asp-controller="Producto" asp-action="Create">
-        <label asp-for="Nombre" class="form-label"></label>
+    <form asp-controller="Producto" asp-action="Producto">
+        <label asp-for="Nombre" class="control-label"></label>
         <input asp-for="Nombre" class="form-control form-control-sm" type="text" placeholder="Escribe un producto" aria-label=".form-control-sm" />
 
-        <label asp-for="Precio" class="form-label"></label>
+        <label asp-for="Precio" class="control-label"></label>
         <input asp-for="Precio" class="form-control form-control-sm" type="text" placeholder="Escribe un precio" aria-label=".form-control-sm" />
 
         <label asp-for="Cantidad" class="control-label"></label>
-        <input asp-for="Cantidad" class="form-control form-control-sm" type="text" placeholder="Escribe una cantidad" aria-label=".form-control-sm" />
-
+        <input asp-for="Cantidad" class="form-control form-control-sm" type="text" placeholder="Escribe una" aria-label=".form-control-sm" />
+    <br>
+    <br>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Vender</button> 
         </div>              
     </form>
-    <h1>@ViewData["Message"]</h1>
+    <h1>@ViewData["Product"]</h1>
+    <h1>@ViewData["Sub"]</h1>
+    <h1>@ViewData["Tot"]</h1>
 
 </div>

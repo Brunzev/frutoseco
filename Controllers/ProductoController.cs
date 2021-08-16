@@ -14,12 +14,20 @@ namespace demomvc.Controllers
         [HttpPost]
         public IActionResult Producto(Producto objproducto)
         {
-            int resultado = 0;
+            double operacion=0;
+            double total;
+            double igv = 1.18;
+            
             ViewData["Message"] = "Sin resultado";
-       
-                resultado = objproducto.Precio + objproducto.Cantidad;
-        }
+        
+                operacion = objproducto.Precio * objproducto.Cantidad;
+                total = operacion * igv;
+                ViewData["Product"] = "El producto es "+ objproducto.Nombre;
+                ViewData["Sub"] = "El subtotal es "+ "S/." + operacion ;
+                ViewData["Tot"] = "El total es "+ "S/." + total ;
 
+            return View("Index");
+        }
 
     }
 }
