@@ -31,7 +31,27 @@ namespace demomvc.Controllers
             _context.Add(objContacto);
             _context.SaveChanges();
             ViewData["Message"] = "El contacto ya esta registrado";
+            //return RedirectToAction(nameof(Index));
             return View();
+        }
+
+        
+        public IActionResult Edit(int id)
+        {
+            Contacto objContacto = _context.DataContactos.Find(id);
+            if(objContacto == null){
+                return NotFound();
+            }
+            return View(objContacto);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id,[Bind("Id,Name,Email,Comment,Phone,Gender")] Contacto objContacto)
+        {
+             _context.Update(objContacto);
+             _context.SaveChanges();
+              ViewData["Message"] = "El contacto ya esta actualizado";
+             return View(objContacto);
         }
 
     }
