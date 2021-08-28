@@ -31,7 +31,7 @@ namespace demomvc.Controllers
             _context.Add(objContacto);
             _context.SaveChanges();
             ViewData["Message"] = "El contacto ya esta registrado";
-            return View("Index");
+            return View();
         }
 
     }
