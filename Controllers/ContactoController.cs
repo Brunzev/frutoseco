@@ -54,5 +54,12 @@ namespace demomvc.Controllers
              return View(objContacto);
         }
 
+        public IActionResult Delete(int id)
+        {
+            Contacto objContacto = _context.DataContactos.Find(id);
+            _context.DataContactos.Remove(objContacto);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
