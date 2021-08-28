@@ -1,30 +1,42 @@
-@model demomvc.Models.Contacto
+
+@model IEnumerable<demomvc.Models.Contacto>
 @{
     ViewData["Title"] = "Contacto";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Formulario de Contacto</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
 
-    <form asp-controller="Contacto" asp-action="Create">
-        <label asp-for="Nombre" class="form-label"></label>
-        <input asp-for="Nombre" class="form-control form-control-sm" type="text" placeholder="Escribe un nombre" aria-label=".form-control-sm" />
-
-        <label asp-for="Correo" class="control-label"></label>
-        <input asp-for="Correo" class="form-control" />
-
-        <label asp-for="Telefono" class="control-label"></label>
-        <input asp-for="Telefono" class="form-control" />
-
-        <label asp-for="Comentario" class="control-label"></label>
-        <input asp-for="Comentario" class="form-control" />
-
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Registrar</button> 
-        </div>              
-    </form>
-    <h1>@ViewData["Message"]</h1>
-
-</div>
+        </tr>
+}
+    </tbody>
+</table>
